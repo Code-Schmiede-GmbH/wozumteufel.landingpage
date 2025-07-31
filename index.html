@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wo zum Teufel - Location Guessing Game</title>
-    <meta name="description" content="Challenge your friends to guess where photos were taken in this exciting location-based guessing game. Available on mobile devices.">
+    <title>Wo zum Teufel - Standort-Ratespiel</title>
+    <meta name="description" content="Fordere deine Freunde heraus, zu erraten, wo Fotos aufgenommen wurden in diesem spannenden standortbasierten Ratespiel. Verfügbar auf mobilen Geräten.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +23,12 @@
                     <img src="assets/images/wozumteufel-sign.png" alt="Wo zum Teufel" class="logo-image">
                 </div>
                 <div class="nav-links">
-                    <a href="#features" class="nav-link">Features</a>
-                    <a href="#how-to-play" class="nav-link">How to Play</a>
-                    <a href="#download" class="nav-link">Download</a>
+                    <a href="#features" class="nav-link" data-en="Features" data-de="Features">Features</a>
+                    <a href="#how-to-play" class="nav-link" data-en="How to Play" data-de="Spielanleitung">Spielanleitung</a>
+                    <a href="#download" class="nav-link" data-en="Download" data-de="Download">Download</a>
+                    <button class="language-switcher" onclick="toggleLanguage()">
+                        <span class="lang-text" data-en="DE" data-de="EN">EN</span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -35,49 +38,49 @@
         <section class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">Wo zum Teufel</h1>
-                <p class="hero-subtitle">The Ultimate Location Guessing Challenge</p>
-                <p class="hero-description">
-                    Take photos, challenge friends, and test your geographical knowledge in this exciting multiplayer location guessing game.
+                <p class="hero-subtitle" data-en="The Ultimate Location Guessing Challenge" data-de="Die ultimative Standort-Herausforderung">Die ultimative Standort-Herausforderung</p>
+                <p class="hero-description" data-en="Take photos, challenge friends, and test your geographical knowledge in this exciting multiplayer location guessing game." data-de="Mache Fotos, fordere Freunde heraus und teste dein geografisches Wissen in diesem spannenden Multiplayer-Standort-Ratespiel.">
+                    Mache Fotos, fordere Freunde heraus und teste dein geografisches Wissen in diesem spannenden Multiplayer-Standort-Ratespiel.
                 </p>
                 <div class="hero-buttons">
                     <a href="#download" class="cta-button primary">
                         <span class="button-icon">📱</span>
-                        <span class="button-text">Download Now</span>
+                        <span class="button-text" data-en="Download Now" data-de="Jetzt herunterladen">Jetzt herunterladen</span>
                     </a>
                     <a href="#how-to-play" class="cta-button secondary">
                         <span class="button-icon">🎮</span>
-                        <span class="button-text">Learn More</span>
+                        <span class="button-text" data-en="Learn More" data-de="Mehr erfahren">Mehr erfahren</span>
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/wozumteufel-start.png" alt="Game Screenshot" class="game-screenshot">
+                <img src="assets/images/wozumteufel-start.png" alt="Spielscreenshot" class="game-screenshot">
             </div>
         </section>
 
         <section id="features" class="features">
             <div class="container">
-                <h2 class="section-title">Game Features</h2>
+                <h2 class="section-title" data-en="Game Features" data-de="Spiel-Features">Spiel-Features</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">📸</div>
-                        <h3 class="feature-title">Photo Challenges</h3>
-                        <p class="feature-description">Take photos of interesting locations and challenge others to guess where they were taken.</p>
+                        <h3 class="feature-title" data-en="Photo Challenges" data-de="Foto-Herausforderungen">Foto-Herausforderungen</h3>
+                        <p class="feature-description" data-en="Take photos of interesting locations and challenge others to guess where they were taken." data-de="Mache Fotos von interessanten Orten und fordere andere heraus zu erraten, wo sie aufgenommen wurden.">Mache Fotos von interessanten Orten und fordere andere heraus zu erraten, wo sie aufgenommen wurden.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🌍</div>
-                        <h3 class="feature-title">Global Maps</h3>
-                        <p class="feature-description">Use interactive maps to make your best guess and see how close you get to the actual location.</p>
+                        <h3 class="feature-title" data-en="Global Maps" data-de="Weltkarten">Weltkarten</h3>
+                        <p class="feature-description" data-en="Use interactive maps to make your best guess and see how close you get to the actual location." data-de="Nutze interaktive Karten für deine beste Schätzung und sieh, wie nah du dem tatsächlichen Standort kommst.">Nutze interaktive Karten für deine beste Schätzung und sieh, wie nah du dem tatsächlichen Standort kommst.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">👥</div>
-                        <h3 class="feature-title">Multiplayer</h3>
-                        <p class="feature-description">Play with friends in real-time multiplayer games and compete for the highest score.</p>
+                        <h3 class="feature-title" data-en="Multiplayer" data-de="Multiplayer">Multiplayer</h3>
+                        <p class="feature-description" data-en="Play with friends in real-time multiplayer games and compete for the highest score." data-de="Spiele mit Freunden in Echtzeit-Multiplayer-Spielen und wetteifere um die höchste Punktzahl.">Spiele mit Freunden in Echtzeit-Multiplayer-Spielen und wetteifere um die höchste Punktzahl.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🏆</div>
-                        <h3 class="feature-title">Scoring System</h3>
-                        <p class="feature-description">Earn points based on how close your guess is to the actual location.</p>
+                        <h3 class="feature-title" data-en="Scoring System" data-de="Punktesystem">Punktesystem</h3>
+                        <p class="feature-description" data-en="Earn points based on how close your guess is to the actual location." data-de="Verdiene Punkte basierend darauf, wie nah deine Schätzung dem tatsächlichen Standort ist.">Verdiene Punkte basierend darauf, wie nah deine Schätzung dem tatsächlichen Standort ist.</p>
                     </div>
                 </div>
             </div>
@@ -85,34 +88,34 @@
 
         <section id="how-to-play" class="how-to-play">
             <div class="container">
-                <h2 class="section-title">How to Play</h2>
+                <h2 class="section-title" data-en="How to Play" data-de="Spielanleitung">Spielanleitung</h2>
                 <div class="steps">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h3>Take a Photo</h3>
-                            <p>Capture an interesting location or landmark that will challenge your friends.</p>
+                            <h3 data-en="Take a Photo" data-de="Foto machen">Foto machen</h3>
+                            <p data-en="Capture an interesting location or landmark that will challenge your friends." data-de="Fotografiere einen interessanten Ort oder ein Wahrzeichen, das deine Freunde herausfordert.">Fotografiere einen interessanten Ort oder ein Wahrzeichen, das deine Freunde herausfordert.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3>Share the Challenge</h3>
-                            <p>Send the photo to friends or create a multiplayer game room.</p>
+                            <h3 data-en="Share the Challenge" data-de="Herausforderung teilen">Herausforderung teilen</h3>
+                            <p data-en="Send the photo to friends or create a multiplayer game room." data-de="Sende das Foto an Freunde oder erstelle einen Multiplayer-Spielraum.">Sende das Foto an Freunde oder erstelle einen Multiplayer-Spielraum.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h3>Make Your Guess</h3>
-                            <p>Use the interactive map to pinpoint where you think the photo was taken.</p>
+                            <h3 data-en="Make Your Guess" data-de="Deine Schätzung abgeben">Deine Schätzung abgeben</h3>
+                            <p data-en="Use the interactive map to pinpoint where you think the photo was taken." data-de="Nutze die interaktive Karte, um zu markieren, wo du denkst, dass das Foto aufgenommen wurde.">Nutze die interaktive Karte, um zu markieren, wo du denkst, dass das Foto aufgenommen wurde.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
                         <div class="step-content">
-                            <h3>See the Results</h3>
-                            <p>Compare your guess with the actual location and see who gets the highest score!</p>
+                            <h3 data-en="See the Results" data-de="Ergebnisse ansehen">Ergebnisse ansehen</h3>
+                            <p data-en="Compare your guess with the actual location and see who gets the highest score!" data-de="Vergleiche deine Schätzung mit dem tatsächlichen Standort und sieh, wer die höchste Punktzahl erreicht!">Vergleiche deine Schätzung mit dem tatsächlichen Standort und sieh, wer die höchste Punktzahl erreicht!</p>
                         </div>
                     </div>
                 </div>
@@ -121,23 +124,23 @@
 
         <section id="download" class="download">
             <div class="container">
-                <h2 class="section-title">Get the Game</h2>
-                <p class="download-description">
-                    Wo zum Teufel is available on mobile devices. Download now and start your location guessing adventure!
+                <h2 class="section-title" data-en="Get the Game" data-de="Spiel herunterladen">Spiel herunterladen</h2>
+                <p class="download-description" data-en="Wo zum Teufel is available on mobile devices. Download now and start your location guessing adventure!" data-de="Wo zum Teufel ist auf mobilen Geräten verfügbar. Lade es jetzt herunter und starte dein Standort-Rate-Abenteuer!">
+                    Wo zum Teufel ist auf mobilen Geräten verfügbar. Lade es jetzt herunter und starte dein Standort-Rate-Abenteuer!
                 </p>
                 <div class="download-buttons">
                     <a href="#" class="download-button app-store">
                         <span class="download-icon">🍎</span>
                         <div class="download-text">
-                            <span class="download-label">Download on the</span>
-                            <span class="download-platform">App Store</span>
+                            <span class="download-label" data-en="Download on the" data-de="Laden im">Laden im</span>
+                            <span class="download-platform" data-en="App Store" data-de="App Store">App Store</span>
                         </div>
                     </a>
                     <a href="#" class="download-button google-play">
                         <span class="download-icon">🤖</span>
                         <div class="download-text">
-                            <span class="download-label">Get it on</span>
-                            <span class="download-platform">Google Play</span>
+                            <span class="download-label" data-en="Get it on" data-de="Erhältlich bei">Erhältlich bei</span>
+                            <span class="download-platform" data-en="Google Play" data-de="Google Play">Google Play</span>
                         </div>
                     </a>
                 </div>
@@ -150,26 +153,26 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Wo zum Teufel</h4>
-                    <p>The ultimate location guessing game for adventure seekers and geography enthusiasts.</p>
+                    <p data-en="The ultimate location guessing game for adventure seekers and geography enthusiasts." data-de="Das ultimative Standort-Ratespiel für Abenteurer und Geografie-Enthusiasten.">Das ultimative Standort-Ratespiel für Abenteurer und Geografie-Enthusiasten.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Links</h4>
+                    <h4 data-en="Links" data-de="Links">Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#how-to-play">How to Play</a></li>
-                        <li><a href="#download">Download</a></li>
+                        <li><a href="#features" data-en="Features" data-de="Features">Features</a></li>
+                        <li><a href="#how-to-play" data-en="How to Play" data-de="Spielanleitung">Spielanleitung</a></li>
+                        <li><a href="#download" data-en="Download" data-de="Download">Download</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Legal</h4>
+                    <h4 data-en="Legal" data-de="Rechtliches">Rechtliches</h4>
                     <ul class="footer-links">
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutz">Datenschutz</a></li>
+                        <li><a href="terms-of-service.html" data-en="Terms of Service" data-de="Nutzungsbedingungen">Nutzungsbedingungen</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Wo zum Teufel. All rights reserved.</p>
+                <p>&copy; 2025 Wo zum Teufel. <span data-en="All rights reserved." data-de="Alle Rechte vorbehalten.">Alle Rechte vorbehalten.</span></p>
             </div>
         </div>
     </footer>

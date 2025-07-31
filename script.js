@@ -1,5 +1,69 @@
-// Smooth scrolling for navigation links
+// Language switching functionality
+let currentLanguage = 'de'; // Default to German
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'de' ? 'en' : 'de';
+    updateLanguage();
+    updateLanguageButton();
+    updateDocumentLanguage();
+}
+
+function updateLanguage() {
+    // Update all elements with data-en and data-de attributes
+    const elements = document.querySelectorAll('[data-en][data-de]');
+    elements.forEach(element => {
+        const text = element.getAttribute(`data-${currentLanguage}`);
+        if (text) {
+            element.textContent = text;
+        }
+    });
+    
+    // Update alt attributes for images
+    const images = document.querySelectorAll('img[data-alt-en][data-alt-de]');
+    images.forEach(img => {
+        const alt = img.getAttribute(`data-alt-${currentLanguage}`);
+        if (alt) {
+            img.alt = alt;
+        }
+    });
+}
+
+function updateLanguageButton() {
+    const langButton = document.querySelector('.lang-text');
+    if (langButton) {
+        const buttonText = currentLanguage === 'de' ? 'EN' : 'DE';
+        langButton.textContent = buttonText;
+    }
+}
+
+function updateDocumentLanguage() {
+    document.documentElement.lang = currentLanguage;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        const descriptions = {
+            de: 'Fordere deine Freunde heraus, zu erraten, wo Fotos aufgenommen wurden in diesem spannenden standortbasierten Ratespiel. Verfügbar auf mobilen Geräten.',
+            en: 'Challenge your friends to guess where photos were taken in this exciting location-based guessing game. Available on mobile devices.'
+        };
+        metaDescription.content = descriptions[currentLanguage];
+    }
+    
+    // Update page title
+    const titles = {
+        de: 'Wo zum Teufel - Standort-Ratespiel',
+        en: 'Wo zum Teufel - Location Guessing Game'
+    };
+    document.title = titles[currentLanguage];
+}
+
+// Initialize language on page load
 document.addEventListener('DOMContentLoaded', function() {
+    updateLanguage();
+    updateLanguageButton();
+    updateDocumentLanguage();
+
+    // Smooth scrolling for navigation links
     // Smooth scrolling for anchor links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -167,6 +231,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     border-bottom: 1px solid rgba(78, 59, 42, 0.1);
                 }
                 
+                .nav-links .language-switcher {
+                    margin-top: 15px;
+                    width: 100%;
+                    justify-content: center;
+                    padding: 12px 16px;
+                }
+                
                 .nav-links a:last-child {
                     border-bottom: none;
                 }
@@ -194,9 +265,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Close mobile menu when clicking on a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
+        // Close mobile menu when clicking on a link or the language switcher
+        navLinks.querySelectorAll('a, .language-switcher').forEach(element => {
+            element.addEventListener('click', function() {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.querySelectorAll('.hamburger-line').forEach(line => {
                     line.style.transform = 'none';
